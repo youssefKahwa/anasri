@@ -59,7 +59,7 @@
   --jet: #433f40;
   --onyx: #1b1b1b;
   --eerie-black-1: #141414;
-  --eerie-black-2: #131313;
+  --eerie-black-2: #171616;
   --smoky-black: #1c1c1c;
   --white-1: #ffffff;
   --white-2: #fafafa;
@@ -170,16 +170,15 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "arial", Helvetica, sans-serif;
   font-size: 12px;
-  background: #1b1b1b url('https://i.ibb.co/xq0Rb0N/Black-and-Gold-Classy-Minimalist-Circular-Name-Logo.png') repeat 0 0;
-  -webkit-animation: animate 30s linear infinite;
-  -moz-animation: animate 30s linear infinite;
-  -ms-animation: animate 30s linear infinite;
-  -o-animation: animate 30s linear infinite;
-  animation: animate 30s linear infinite;
+  /* background: #1b1b1b url('https://i.ibb.co/FXFxshW/bla-4.png') repeat 0 0; */
+  background: #1b1b1b url('https://i.ibb.co/xY6MzVQ/bla-3.png') repeat 0 0;
+  -webkit-animation: animate 60s linear infinite;
+  -moz-animation: animate 60s linear infinite;
+  -ms-animation: animate 60s linear infinite;
+  -o-animation: animate 60s linear infinite;
+  animation: animate 60s linear infinite;
 }
 
 @keyframes animate {
@@ -943,7 +942,7 @@ main {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: 0.15s ease-in-out;
+  transition: 0.10s ease-in-out;
 }
 
 .filter-select.active + .select-list {
@@ -1520,7 +1519,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #RESUME
    */
-
+  
   .timeline-list { margin-left: 65px; }
 
   .timeline-item:not(:last-child)::before { left: -40px; }
@@ -1913,3 +1912,57 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+
+
+
+.language-selector {
+  position: fixed;
+  top: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's above other content */
+  border-radius: 5px;
+}
+
+.toggle-languages {
+  display: none;
+}
+
+.current-language {
+  background-color: rgba(255, 255, 255, 0.648);;
+  padding: 5px 10px;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+
+.language-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.646);
+  border-top: none;
+  border-radius: 5px 5px 5px 5px;
+  padding: 6px 0;
+}
+
+.toggle-languages:checked + .current-language + .language-options {
+  display: block;
+}
+
+.language-options a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #433f40;
+}
+
+.language-options a:hover {
+  background-color: rgba(255, 255, 255, 0.8);;
+}
+
+
+
+
+

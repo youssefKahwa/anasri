@@ -3,12 +3,6 @@
 \*-----------------------------------*/
 
 
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
 
 
 /*-----------------------------------*\
@@ -303,7 +297,9 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
-
+.filter-item {
+  color: white;
+}
 .content-card {
   position: relative;
   background: var(--border-gradient-onyx);

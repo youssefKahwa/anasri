@@ -142,3 +142,22 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+// Check URL for anchor (hash) and activate the corresponding section
+document.addEventListener("DOMContentLoaded", function () {
+  const hash = window.location.hash.substring(1);  // Get the hash without the "#"
+  
+  if (hash) {
+    for (let pageKey in pageMapping) {
+      if (pageKey === hash) {
+        for (let j = 0; j < pages.length; j++) {
+          if (pages[j].dataset.page === pageKey) {
+            pages[j].classList.add("active");
+            window.scrollTo(0, 0); // Scroll to the top
+          } else {
+            pages[j].classList.remove("active");
+          }
+        }
+      }
+    }
+  }
+});

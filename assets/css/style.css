@@ -1915,8 +1915,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .language-selector {
   position: fixed;
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
+  top: 21px; /* Adjust as needed */
+  right: 50px; /* Adjust as needed */
   z-index: 1000; /* Ensure it's above other content */
   border-radius: 5px;
 }
@@ -1936,7 +1936,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: none;
   position: absolute;
   top: calc(100% + 4px);
-  right: 0;
+  right: 0px;
   background-color: rgba(255, 255, 255, 0.646);
   border-top: none;
   border-radius: 5px 5px 5px 5px;

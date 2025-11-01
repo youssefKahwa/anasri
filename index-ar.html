@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنس أنسري</title>
+
+    <!--
+    - أيقونة مفضلة
+  -->
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+    <!--
+    - رابط CSS مخصص
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+    - رابط خط جوجل
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="language-selector">
+        <input type="checkbox" id="toggleLanguages" class="toggle-languages">
+        <label for="toggleLanguages" class="current-language">AR</label>
+        <div class="language-options">
+            <a href="index.html">EN</a> <a href="index-fr.html">FR</a> <a href="index-ar.html">AR</a>
+        </div>
+    </div>
+
+    <!--
+    - #الرئيسية
+  -->
+
+    <main>
+
+        <!--
+      - #الشريط الجانبي
+    -->
+
+        <aside class="sidebar" data-sidebar>
+
+            <div class="sidebar-info">
+
+                <img src="./assets/images/profile.png" alt="أنس أنسري" width="140">
+
+                <div class="info-content">
+                    <h1 class="name" title="أنس أنسري">أنس أنسري</h1>
+
+                    <p class="title">مهندس حاسوب</p>
+                </div>
+
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>إظهار جهات الاتصال</span>
+
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+
+            </div>
+
+            <div class="sidebar-info_more">
+
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">البريد الإلكتروني</p>
+
+                            <a href="mailto:anasanasri3030@gmail.com" class="contact-link">anasanasri3030@gmail.com</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">الهاتف</p>
+
+                            <a href="tel:+212761844170" class="contact-link">+212 761844170</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">تاريخ الميلاد</p>
+
+                            <time datetime="1982-06-23">04 يونيو, 2001</time>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">الموقع</p>
+
+                            <address>الدار البيضاء، المغرب</address>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+
+                    <li class="social-item">
+                        <a href="https://www.facebook.com/anas.anasri.30" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="https://twitter.com/anasanasri_" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/anas_anasri_30/" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <!--
+      - المحتوى الرئيسي
+    -->
+
+        <div class="main-content">
+
+            <!--
+        - #شريط التنقل
+      -->
+
+            <nav class="navbar">
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <button class="navbar-link  active" data-nav-link>نبذة عني</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>السيرة الذاتية</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>الملف الشخصي</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>المدونة</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>اتصل بي</button>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!--
+        - #نبذة عني
+      -->
+
+            <article class="about  active" data-page="about">
+
+                <header>
+                    <h2 class="h2 article-title">نبذة عني</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>
+                        أنا مطور شغوف وطموح يبلغ من العمر 23 عامًا ولدي خبرة كبيرة في مجال قواعد البيانات.
+                        خبير في تقنيات Java وSpring Boot وAngular، وأتمتع بمهارات في تصميم حلول مبتكرة وعالية الأداء.
+                        مع قدرة قوية على حل التحديات وإدارة المشاريع بنجاح، أنا شريك قيم في فرق ديناميكية.
+                    </p>
+
+                    <p>
+                        دوري هو إنشاء مواقع ويب عملية وسهلة الاستخدام، مع ضمان أنها جذابة بصريًا.
+                        أضيف لمسة شخصية لكل مشروع لضمان جاذبيته وسهولة التنقل فيه.
+                        هدفي هو إيصال رسالتك وهويتك بأكثر الطرق إبداعًا.
+                    </p>
+                </section>
+
+                <!--
+          - الخدمات
+        -->
+
+                <section class="service">
+
+                    <h3 class="h3 service-title">ما الذي أفعله</h3>
+
+                    <ul class="service-list">
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-dev.svg" alt="أيقونة تطوير الويب" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">تطوير الويب</h4>
+
+                                <p class="service-item-text">
+                                    تطوير مواقع ذات جودة عالية على المستوى الاحترافي. باستخدام عملية كاملة full-stack.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-design.svg" alt="أيقونة التصميم" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">التصميم</h4>
+
+                                <p class="service-item-text">
+                                    تصميم عصري وعالي الجودة يتم على مستوى احترافي.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-app.svg" alt="أيقونة التطبيقات" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">تطبيقات الجوال</h4>
+
+                                <p class="service-item-text">
+                                    تطوير احترافي للتطبيقات على أنظمة iOS وAndroid.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-video.svg" alt="أيقونة الفيديو" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">مونتاج الفيديو</h4>
+
+                                <p class="service-item-text">
+                                    سرد القصص بسلاسة من خلال التحرير الدقيق، مما يعزز السرد البصري.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/art.svg" alt="أيقونة الفنون البصرية" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">الفنون البصرية</h4>
+
+                                <p class="service-item-text">
+                                    التعبير الإبداعي من خلال وسائل متعددة، والتقاط جوهر الخيال.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/scriptwriting.svg" alt="أيقونة كتابة السيناريو" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">كتابة السيناريو</h4>
+
+                                <p class="service-item-text">
+                                    كتابة قصص جذابة بدقة وعمق، مما يمهد الطريق لرحلات سينمائية.
+                                </p>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+                <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                <div class="modal-container" data-modal-container>
+
+                    <div class="overlay" data-overlay></div>
+
+                    <section class="testimonials-modal">
+
+                        <button class="modal-close-btn" data-modal-close-btn>
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+
+                        <div class="modal-img-wrapper">
+                            <figure class="modal-avatar-box">
+                                <img src="./assets/images/avatar-1.png" alt="دانيال لويس" width="80" data-modal-img>
+                            </figure>
+
+                            <img src="./assets/images/icon-quote.svg" alt="أيقونة الاقتباس">
+                        </div>
+
+                        <div class="modal-content">
+
+                            <h4 class="h3 modal-title" data-modal-title>دانيال لويس</h4>
+
+                            <time datetime="2021-06-14">14 يونيو, 2021</time>
+
+                            <div data-modal-text>
+                                <p>
+                                    تم تعيين ريتشارد لإنشاء هوية الشركة. كنا راضين جدا عن العمل المنجز.
+                                    لديه الكثير من الخبرة ويهتم كثيرًا باحتياجات العميل.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+                <!--
+          - العملاء
+        -->
+
+                <section class="clients">
+
+                </section>
+
+            </article>
+
+            <!--
+        - #السيرة الذاتية
+      -->
+
+            <article class="resume" data-page="resume">
+
+                <header>
+                    <h2 class="h2 article-title">السيرة الذاتية</h2>
+                </header>
+
+                <section class="timeline">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">التعليم</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">دبلوم مهندس دولة في علوم الحاسوب والشبكات (IIR)</h4>
+
+                            <span>2022 - 2024</span>
+
+                            <p class="timeline-text">
+                                المدرسة المغربية لعلوم المهندس (EMSI) الدار البيضاء.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">بكالوريوس في الرياضيات وعلوم الحاسوب (SMI)</h4>
+
+                            <span>2021 - 2022</span>
+
+                            <p class="timeline-text">
+                                جامعة الحسن الثاني بالدار البيضاء
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">بكالوريا في العلوم الرياضية أ</h4>
+
+                            <span>2018 - 2019</span>
+
+                            <p class="timeline-text">
+                                ثانوية الخوارزمي الدار البيضاء
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="timeline">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">الخبرات</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">شركة M2T</h4>
+
+                            <span>مارس 2024 - أغسطس 2024</span>
+
+                            <p class="timeline-text">
+                                تصميم وتطوير منصة دفع عبر الإنترنت باسم "PayPik" سهلة التنفيذ، تدعم وسائل الدفع المختلفة
+                                (بطاقة ائتمان، رمز، PayPal، إلخ). تتيح هذه الحلول للتجار إدارة عدة طرق دفع بسهولة على
+                                موقعهم الإلكتروني دون تعقيد أنظمة تتبع المعاملات.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">شركة Attijari Factoring</h4>
+
+                            <span>أغسطس 2023 - سبتمبر 2023</span>
+
+                            <p class="timeline-text">
+                                تصميم وتطوير تطبيق باسم "AFMM" باستخدام JavaFX لتوفير حل شامل لإدارة الموردين وتوليد
+                                الفواتير.
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="skill">
+
+                    <h3 class="h3 skills-title">مهاراتي</h3>
+
+                    <ul class="skills-list content-card">
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Spring Boot</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Angular</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">React js</h5>
+                                <data value="60">60%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 60%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Tailwind CSS</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Bootstrap</h5>
+                                <data value="70">70%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">PostGreSQL</h5>
+                                <data value="70">70%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">MySQL</h5>
+                                <data value="70">70%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Figma</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Adobe</h5>
+                                <data value="70">70%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Git</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Scrum</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+            <!--
+        - #الملف الشخصي
+      -->
+
+            <article class="portfolio" data-page="portfolio">
+
+                <header>
+                    <h2 class="h2 article-title">الملف الشخصي</h2>
+                </header>
+
+                <section class="portfolio-items">
+
+                    <article class="portfolio-item">
+                        <figure class="portfolio-img-box">
+                            <img src="./assets/images/portfolio1.png" alt="تطبيق الويب" width="340">
+                        </figure>
+
+                        <div class="portfolio-content">
+                            <h3 class="h3">تطبيق الويب</h3>
+                            <p>
+                                تطوير تطبيق ويب لتوفير حل شامل لاحتياجات العمل مع تحسين تجربة المستخدم
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <figure class="portfolio-img-box">
+                            <img src="./assets/images/portfolio2.png" alt="تصميم واجهات المستخدم" width="340">
+                        </figure>
+
+                        <div class="portfolio-content">
+                            <h3 class="h3">تصميم واجهات المستخدم</h3>
+                            <p>
+                                تصميم واجهات المستخدم بديهي وسهل الاستخدام مع التركيز على التفاعل وتجربة المستخدم
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <figure class="portfolio-img-box">
+                            <img src="./assets/images/portfolio3.png" alt="تطبيق الهاتف المحمول" width="340">
+                        </figure>
+
+                        <div class="portfolio-content">
+                            <h3 class="h3">تطبيق الهاتف المحمول</h3>
+                            <p>
+                                تطوير تطبيق جوال متكامل مع ميزات مبتكرة لتحسين تجربة المستخدم
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+
+            </article>
+
+            <!--
+        - #المدونة
+      -->
+
+            <article class="blog" data-page="blog">
+
+                <header>
+                    <h2 class="h2 article-title">المدونة</h2>
+                </header>
+
+                <section class="blog-posts">
+
+                    <ul class="blog-posts-list">
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <div
+                                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+                                        <iframe width="100%" height="100%"
+                                            src="https://www.youtube.com/embed/pBCxmmzLkhw" frameborder="0"
+                                            allowfullscreen
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                    </div>
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">PayPik</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">mars,2024 - août,2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Java (Spring Boot), Angular</h3>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <div
+                                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+                                        <iframe width="100%" height="100%"
+                                            src="https://www.youtube.com/embed/7Wwd1C2mrR4" frameborder="0"
+                                            allowfullscreen
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                    </div>
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Elmawkef</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Flutter, FireBase</h3>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <div
+                                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+                                        <iframe width="100%" height="100%"
+                                            src="https://www.youtube.com/embed/Cl-KoGahMGw" frameborder="0"
+                                            allowfullscreen
+                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                    </div>
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Attijari Factoring Management Maroc</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">August,2023 - September,2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Java, JavaFX</h3>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+            <!--
+        - #اتصل بي
+      -->
+
+            <article class="contact" data-page="contact">
+
+                <header>
+                    <h2 class="h2 article-title">اتصل بي</h2>
+                </header>
+
+                <section class="contact-form">
+
+                    <form action="send-message.php" method="post">
+
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+
+                    </form>
+
+                </section>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <!--
+    - #تذييل
+  -->
+
+    <footer class="footer">
+
+        <div class="footer-info">
+            <p>&copy; 2024 أنس أنسري. جميع الحقوق محفوظة.</p>
+        </div>
+
+    </footer>
+
+    <!--
+    - #رابط جافا سكريبت
+  -->
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

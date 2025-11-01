@@ -29,7 +29,7 @@
   ), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
+    #ffda6b 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
@@ -167,7 +167,7 @@ body {
   font-family: "arial", Helvetica, sans-serif;
   font-size: 12px;
   /* background: #1b1b1b url('https://i.ibb.co/FXFxshW/bla-4.png') repeat 0 0; */
-  background: #1b1b1b url('https://i.ibb.co/xY6MzVQ/bla-3.png') repeat 0 0;
+  background: #1b1b1b url('../images/bla-3.png') repeat 0 0;
   -webkit-animation: animate 60s linear infinite;
   -moz-animation: animate 60s linear infinite;
   -ms-animation: animate 60s linear infinite;
@@ -1915,8 +1915,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .language-selector {
   position: fixed;
-  top: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
+  top: 21px; /* Adjust as needed */
+  right: 50px; /* Adjust as needed */
   z-index: 1000; /* Ensure it's above other content */
   border-radius: 5px;
 }
@@ -1936,7 +1936,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: none;
   position: absolute;
   top: calc(100% + 4px);
-  right: 0;
+  right: 0px;
   background-color: rgba(255, 255, 255, 0.646);
   border-top: none;
   border-radius: 5px 5px 5px 5px;
@@ -1962,3 +1962,30 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
+
+/* download button */
+.download-resume {
+  margin: 20px 0;
+  text-align: center; /* Center-align the button */
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #6a5a2b; /* Adjust color as needed */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #ffda6b; /* Darken on hover */
+}
+
+.btn-download ion-icon {
+  margin-right: 8px; /* Add space between icon and text */
+}

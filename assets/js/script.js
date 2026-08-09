@@ -10,41 +10,25 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
+// theme toggle (dark by default)
+const themeToggleBtn = document.querySelector("[data-theme-toggle]");
 
-// modal variables
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-  testimonialsItem[i].addEventListener("click", function () {
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-    testimonialsModalFunc();
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", function () {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+    if (isLight) {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
   });
 }
 
-// add click event to modal close button and overlay
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
 // custom select variables
 const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
+const selectItems = document.querySelectorAll("[data-select-btn]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
@@ -90,34 +74,17 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input fields
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-  });
-}
-
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // Map for multilingual page navigation
 const pageMapping = {
-  "about": ["About", "À propos", "حول"],
+  "about": ["About", "À propos", "حول", "نبذة عني"],
   "resume": ["Resume", "CV", "السيرة الذاتية"],
-  "portfolio": ["Portfolio", "Portfolio", "الأعمال"],
-  "blog": ["Blog", "Blog", "المدونة"],
-  "contact": ["Contact", "Contact", "اتصل"]
+  "portfolio": ["Portfolio", "الأعمال", "الملف الشخصي"],
+  "blog": ["Blog", "المدونة"],
+  "contact": ["Contact", "اتصل", "اتصل بي"]
 };
 
 // add event to all nav links
@@ -161,3 +128,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// youtube click-to-play facade (avoids loading multiple iframes upfront)
+const youtubeFacades = document.querySelectorAll("[data-youtube-facade]");
+
+for (let i = 0; i < youtubeFacades.length; i++) {
+  youtubeFacades[i].addEventListener("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const videoId = this.dataset.videoId;
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("allowfullscreen", "");
+    this.innerHTML = "";
+    this.appendChild(iframe);
+  });
+}

@@ -5,7 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أنس أنسري</title>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>أنس أنسري — مهندس برمجيات</title>
+    <meta name="description" content="أنس أنسري مهندس برمجيات في شركة M2T، يبني واجهات برمجة تطبيقات وتطبيقات ويب موثوقة باستخدام Java وSpring Boot.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="أنس أنسري — مهندس برمجيات">
+    <meta property="og:description" content="مهندس برمجيات في شركة M2T، يبني واجهات برمجة تطبيقات وتطبيقات باستخدام Java وSpring Boot.">
+    <meta property="og:image" content="./assets/images/profile.png">
+    <meta name="twitter:card" content="summary">
 
     <!--
     - أيقونة مفضلة
@@ -27,11 +43,16 @@
 
 <body>
 
+    <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="تبديل الوضع الفاتح/الداكن" title="تبديل الوضع الفاتح/الداكن">
+        <ion-icon name="sunny-outline" class="icon-light"></ion-icon>
+        <ion-icon name="moon-outline" class="icon-dark"></ion-icon>
+    </button>
+
     <div class="language-selector">
         <input type="checkbox" id="toggleLanguages" class="toggle-languages">
         <label for="toggleLanguages" class="current-language">AR</label>
         <div class="language-options">
-            <a href="index.html">EN</a> <a href="index-fr.html">FR</a> <a href="index-ar.html">AR</a>
+            <a href="index-en.html">EN</a> <a href="index.html">FR</a> <a href="index-ar.html">AR</a>
         </div>
     </div>
 
@@ -49,12 +70,14 @@
 
             <div class="sidebar-info">
 
-                <img src="./assets/images/profile.png" alt="أنس أنسري" width="140">
+                <figure class="avatar-box">
+                    <img src="./assets/images/profile.png" alt="أنس أنسري" width="140">
+                </figure>
 
                 <div class="info-content">
                     <h1 class="name" title="أنس أنسري">أنس أنسري</h1>
 
-                    <p class="title">مهندس حاسوب</p>
+                    <p class="title">مهندس برمجيات</p>
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
@@ -108,7 +131,7 @@
                         <div class="contact-info">
                             <p class="contact-title">تاريخ الميلاد</p>
 
-                            <time datetime="1982-06-23">04 يونيو, 2001</time>
+                            <time datetime="2001-06-04">04 يونيو, 2001</time>
                         </div>
 
                     </li>
@@ -134,20 +157,14 @@
                 <ul class="social-list">
 
                     <li class="social-item">
-                        <a href="https://www.facebook.com/anas.anasri.30" class="social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
+                        <a href="https://www.linkedin.com/in/anasanasri" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                     </li>
 
                     <li class="social-item">
-                        <a href="https://twitter.com/anasanasri_" class="social-link">
+                        <a href="https://twitter.com/anasanasri_me" class="social-link" target="_blank" rel="noopener noreferrer">
                             <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.instagram.com/anas_anasri_30/" class="social-link">
-                            <ion-icon name="logo-instagram"></ion-icon>
                         </a>
                     </li>
 
@@ -199,7 +216,7 @@
         - #نبذة عني
       -->
 
-            <article class="about  active" data-page="about">
+            <article class="about  active" data-page="about" id="about">
 
                 <header>
                     <h2 class="h2 article-title">نبذة عني</h2>
@@ -207,15 +224,16 @@
 
                 <section class="about-text">
                     <p>
-                        أنا مطور شغوف وطموح يبلغ من العمر 23 عامًا ولدي خبرة كبيرة في مجال قواعد البيانات.
-                        خبير في تقنيات Java وSpring Boot وAngular، وأتمتع بمهارات في تصميم حلول مبتكرة وعالية الأداء.
-                        مع قدرة قوية على حل التحديات وإدارة المشاريع بنجاح، أنا شريك قيم في فرق ديناميكية.
+                        أنا مهندس برمجيات، أبني باستخدام Java وSpring Boot واجهات برمجة تطبيقات (APIs) وتطبيقات
+                        قوية معتمدة على قواعد البيانات تلبي احتياجات حقيقية للأعمال — من منصات الدفع الإلكتروني
+                        إلى أدوات الإدارة الداخلية. أستمتع بتفكيك المشاكل المعقدة إلى حلول واضحة وقابلة للصيانة.
                     </p>
 
                     <p>
-                        دوري هو إنشاء مواقع ويب عملية وسهلة الاستخدام، مع ضمان أنها جذابة بصريًا.
-                        أضيف لمسة شخصية لكل مشروع لضمان جاذبيته وسهولة التنقل فيه.
-                        هدفي هو إيصال رسالتك وهويتك بأكثر الطرق إبداعًا.
+                        هذا هو المجال الذي أتميز فيه أكثر، لكنني مرتاح أيضًا في العمل على كامل المكدس التقني
+                        (Full Stack) وأستطيع تطوير ميزة كاملة من تصميم قاعدة البيانات إلى واجهة مستخدم فعالة عند
+                        الحاجة. أكتب كودًا مبنيًا للتوسع، وأتعاون بشكل جيد ضمن فرق Agile، وأواصل تطوير مهاراتي
+                        باستمرار — بما في ذلك الواجهة الأمامية.
                     </p>
                 </section>
 
@@ -232,14 +250,15 @@
                         <li class="service-item">
 
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-dev.svg" alt="أيقونة تطوير الويب" width="40">
+                                <ion-icon name="code-slash-outline"></ion-icon>
                             </div>
 
                             <div class="service-content-box">
-                                <h4 class="h4 service-item-title">تطوير الويب</h4>
+                                <h4 class="h4 service-item-title">تطوير واجهات برمجة التطبيقات</h4>
 
                                 <p class="service-item-text">
-                                    تطوير مواقع ذات جودة عالية على المستوى الاحترافي. باستخدام عملية كاملة full-stack.
+                                    تصميم وتطوير تطبيقات خادمية موثوقة وواجهات برمجة تطبيقات (REST APIs) باستخدام
+                                    Java وSpring Boot.
                                 </p>
                             </div>
 
@@ -248,14 +267,15 @@
                         <li class="service-item">
 
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-design.svg" alt="أيقونة التصميم" width="40">
+                                <ion-icon name="server-outline"></ion-icon>
                             </div>
 
                             <div class="service-content-box">
-                                <h4 class="h4 service-item-title">التصميم</h4>
+                                <h4 class="h4 service-item-title">تصميم قواعد البيانات</h4>
 
                                 <p class="service-item-text">
-                                    تصميم عصري وعالي الجودة يتم على مستوى احترافي.
+                                    نمذجة وتحسين قواعد البيانات العلائقية مثل PostgreSQL وMySQL من حيث الأداء
+                                    وسلامة البيانات.
                                 </p>
                             </div>
 
@@ -264,14 +284,15 @@
                         <li class="service-item">
 
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-app.svg" alt="أيقونة التطبيقات" width="40">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
                             </div>
 
                             <div class="service-content-box">
-                                <h4 class="h4 service-item-title">تطبيقات الجوال</h4>
+                                <h4 class="h4 service-item-title">تطبيقات ويب وجوال</h4>
 
                                 <p class="service-item-text">
-                                    تطوير احترافي للتطبيقات على أنظمة iOS وAndroid.
+                                    بناء تطبيقات ويب وجوال متكاملة من الألف إلى الياء، من منطق التطبيق إلى واجهة
+                                    مستخدم فعالة.
                                 </p>
                             </div>
 
@@ -280,46 +301,14 @@
                         <li class="service-item">
 
                             <div class="service-icon-box">
-                                <img src="./assets/images/icon-video.svg" alt="أيقونة الفيديو" width="40">
+                                <ion-icon name="people-outline"></ion-icon>
                             </div>
 
                             <div class="service-content-box">
-                                <h4 class="h4 service-item-title">مونتاج الفيديو</h4>
+                                <h4 class="h4 service-item-title">العمل ضمن فرق Agile</h4>
 
                                 <p class="service-item-text">
-                                    سرد القصص بسلاسة من خلال التحرير الدقيق، مما يعزز السرد البصري.
-                                </p>
-                            </div>
-
-                        </li>
-
-                        <li class="service-item">
-
-                            <div class="service-icon-box">
-                                <img src="./assets/images/art.svg" alt="أيقونة الفنون البصرية" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">الفنون البصرية</h4>
-
-                                <p class="service-item-text">
-                                    التعبير الإبداعي من خلال وسائل متعددة، والتقاط جوهر الخيال.
-                                </p>
-                            </div>
-
-                        </li>
-
-                        <li class="service-item">
-
-                            <div class="service-icon-box">
-                                <img src="./assets/images/scriptwriting.svg" alt="أيقونة كتابة السيناريو" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">كتابة السيناريو</h4>
-
-                                <p class="service-item-text">
-                                    كتابة قصص جذابة بدقة وعمق، مما يمهد الطريق لرحلات سينمائية.
+                                    العمل ضمن فرق Scrum لتسليم الميزات بشكل تدريجي، من التصميم إلى النشر.
                                 </p>
                             </div>
 
@@ -329,63 +318,13 @@
 
                 </section>
 
-                <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-                <div class="modal-container" data-modal-container>
-
-                    <div class="overlay" data-overlay></div>
-
-                    <section class="testimonials-modal">
-
-                        <button class="modal-close-btn" data-modal-close-btn>
-                            <ion-icon name="close-outline"></ion-icon>
-                        </button>
-
-                        <div class="modal-img-wrapper">
-                            <figure class="modal-avatar-box">
-                                <img src="./assets/images/avatar-1.png" alt="دانيال لويس" width="80" data-modal-img>
-                            </figure>
-
-                            <img src="./assets/images/icon-quote.svg" alt="أيقونة الاقتباس">
-                        </div>
-
-                        <div class="modal-content">
-
-                            <h4 class="h3 modal-title" data-modal-title>دانيال لويس</h4>
-
-                            <time datetime="2021-06-14">14 يونيو, 2021</time>
-
-                            <div data-modal-text>
-                                <p>
-                                    تم تعيين ريتشارد لإنشاء هوية الشركة. كنا راضين جدا عن العمل المنجز.
-                                    لديه الكثير من الخبرة ويهتم كثيرًا باحتياجات العميل.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </section>
-
-                </div>
-
-                <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-                <!--
-          - العملاء
-        -->
-
-                <section class="clients">
-
-                </section>
-
             </article>
 
             <!--
         - #السيرة الذاتية
       -->
 
-            <article class="resume" data-page="resume">
+            <article class="resume" data-page="resume" id="resume">
 
                 <header>
                     <h2 class="h2 article-title">السيرة الذاتية</h2>
@@ -457,7 +396,21 @@
 
                         <li class="timeline-item">
 
-                            <h4 class="h4 timeline-item-title">شركة M2T</h4>
+                            <h4 class="h4 timeline-item-title">شركة M2T — مهندس برمجيات</h4>
+
+                            <span>نوفمبر 2024 - إلى الآن</span>
+
+                            <p class="timeline-text">
+                                أعمل بدوام كامل كمهندس برمجيات، حيث أساهم في تطوير وصيانة منصة الدفع الإلكتروني
+                                "PayPik" وحلول داخلية أخرى باستخدام Java وSpring Boot، وأشارك في دورة التطوير
+                                الكاملة من تصميم الميزات الجديدة وواجهات برمجة التطبيقات إلى النشر والصيانة.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">شركة M2T — متدرب مهندس (مشروع نهاية الدراسة)</h4>
 
                             <span>مارس 2024 - أغسطس 2024</span>
 
@@ -495,6 +448,19 @@
                         <li class="skills-item">
 
                             <div class="title-wrapper">
+                                <h5 class="h5">Java</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
                                 <h5 class="h5">Spring Boot</h5>
                                 <data value="90">90%</data>
                             </div>
@@ -508,64 +474,12 @@
                         <li class="skills-item">
 
                             <div class="title-wrapper">
-                                <h5 class="h5">Angular</h5>
-                                <data value="80">80%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">React js</h5>
-                                <data value="60">60%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 60%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Tailwind CSS</h5>
-                                <data value="90">90%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 90%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Bootstrap</h5>
-                                <data value="70">70%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
                                 <h5 class="h5">PostGreSQL</h5>
-                                <data value="70">70%</data>
+                                <data value="75">75%</data>
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                                <div class="skill-progress-fill" style="width: 75%;"></div>
                             </div>
 
                         </li>
@@ -574,37 +488,11 @@
 
                             <div class="title-wrapper">
                                 <h5 class="h5">MySQL</h5>
-                                <data value="70">70%</data>
+                                <data value="75">75%</data>
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Figma</h5>
-                                <data value="80">80%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Adobe</h5>
-                                <data value="70">70%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%;"></div>
+                                <div class="skill-progress-fill" style="width: 75%;"></div>
                             </div>
 
                         </li>
@@ -613,11 +501,11 @@
 
                             <div class="title-wrapper">
                                 <h5 class="h5">Git</h5>
-                                <data value="80">80%</data>
+                                <data value="85">85%</data>
                             </div>
 
                             <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                                <div class="skill-progress-fill" style="width: 85%;"></div>
                             </div>
 
                         </li>
@@ -635,6 +523,58 @@
 
                         </li>
 
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Tailwind CSS</h5>
+                                <data value="65">65%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 65%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Bootstrap</h5>
+                                <data value="60">60%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 60%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Figma</h5>
+                                <data value="60">60%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 60%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Adobe</h5>
+                                <data value="55">55%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 55%;"></div>
+                            </div>
+
+                        </li>
+
                     </ul>
 
                 </section>
@@ -645,52 +585,332 @@
         - #الملف الشخصي
       -->
 
-            <article class="portfolio" data-page="portfolio">
+            <article class="portfolio" data-page="portfolio" id="portfolio">
 
                 <header>
                     <h2 class="h2 article-title">الملف الشخصي</h2>
                 </header>
 
-                <section class="portfolio-items">
+                <section class="projects">
 
-                    <article class="portfolio-item">
-                        <figure class="portfolio-img-box">
-                            <img src="./assets/images/portfolio1.png" alt="تطبيق الويب" width="340">
-                        </figure>
+                    <ul class="filter-list">
 
-                        <div class="portfolio-content">
-                            <h3 class="h3">تطبيق الويب</h3>
-                            <p>
-                                تطوير تطبيق ويب لتوفير حل شامل لاحتياجات العمل مع تحسين تجربة المستخدم
-                            </p>
-                        </div>
-                    </article>
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>الكل</button>
+                        </li>
 
-                    <article class="portfolio-item">
-                        <figure class="portfolio-img-box">
-                            <img src="./assets/images/portfolio2.png" alt="تصميم واجهات المستخدم" width="340">
-                        </figure>
+                        <li class="filter-item">
+                            <button data-filter-btn>تطبيقات الويب</button>
+                        </li>
 
-                        <div class="portfolio-content">
-                            <h3 class="h3">تصميم واجهات المستخدم</h3>
-                            <p>
-                                تصميم واجهات المستخدم بديهي وسهل الاستخدام مع التركيز على التفاعل وتجربة المستخدم
-                            </p>
-                        </div>
-                    </article>
+                        <li class="filter-item">
+                            <button data-filter-btn>تطبيقات الجوال</button>
+                        </li>
 
-                    <article class="portfolio-item">
-                        <figure class="portfolio-img-box">
-                            <img src="./assets/images/portfolio3.png" alt="تطبيق الهاتف المحمول" width="340">
-                        </figure>
+                        <li class="filter-item">
+                            <button data-filter-btn>تطبيقات سطح المكتب</button>
+                        </li>
 
-                        <div class="portfolio-content">
-                            <h3 class="h3">تطبيق الهاتف المحمول</h3>
-                            <p>
-                                تطوير تطبيق جوال متكامل مع ميزات مبتكرة لتحسين تجربة المستخدم
-                            </p>
-                        </div>
-                    </article>
+                        <li class="filter-item">
+                            <button data-filter-btn>تصميم واجهات المستخدم</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>تصميم الشعارات</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>مونتاج الفيديو</button>
+                        </li>
+
+                    </ul>
+
+                    <div class="filter-select-box">
+
+                        <button class="filter-select" data-select>
+
+                            <div class="select-value" data-selecct-value>اختر فئة</div>
+
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+
+                        </button>
+
+                        <ul class="select-list">
+
+                            <li class="select-item">
+                                <button data-select-btn>الكل</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>تطبيقات الويب</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>تطبيقات الجوال</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>تطبيقات سطح المكتب</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>تصميم واجهات المستخدم</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>تصميم الشعارات</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>مونتاج الفيديو</button>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <ul class="project-list">
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الويب">
+                            <a href="https://github.com/ANASANASRI/Casa_Delivery_MERN">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web1casadelivery.jpg" alt="كازا ديليفري"
+                                        loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CASA DELIVERY</h3>
+
+                                <p class="project-category">تطوير ويب</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الويب">
+                            <a href="https://anasanasri.github.io/dashboard-widget-paypik/">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web5paypik.jpg" alt="باي بيك" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">PAY PIK</h3>
+
+                                <p class="project-category">تطوير ويب</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الويب">
+                            <a href="https://github.com/ANASANASRI/ANAS-BOOK-STOR-MERN">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web2anasbook.jpg" alt="أناس بوك" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">ANAS BOOK</h3>
+
+                                <p class="project-category">تطوير ويب</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات سطح المكتب">
+                            <a href="https://github.com/ANASANASRI/SupplierManagementSystem_SQL-Server_JavaFX">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/desktop1afmm.jpg" alt="AFMM" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">AFMM</h3>
+
+                                <p class="project-category">تطبيق سطح مكتب</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الجوال">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/mobile3casadelivery.jpg" alt="كازا ديليفري"
+                                        loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CASA DELIVERY</h3>
+
+                                <p class="project-category">تطبيق جوال</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تصميم الشعارات">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/logo3olive.jpg" alt="أوليف" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">OLIVE</h3>
+
+                                <p class="project-category">تصميم شعار</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تصميم الشعارات">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/logo2criov.jpg" alt="كريوف" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CRIOV</h3>
+
+                                <p class="project-category">تصميم شعار</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تصميم واجهات المستخدم">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/uiux1criov.jpg" alt="كريوف" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CRIOV</h3>
+
+                                <p class="project-category">تصميم واجهات المستخدم</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الويب">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web3tabibe.jpg" alt="طبيبي" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">TABIBE</h3>
+
+                                <p class="project-category">تطوير ويب</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الجوال">
+                            <a href="https://vimeo.com/749606795">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/mobile1elmawkef.jpg" alt="الموقف"
+                                        loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">ELMAWKEF</h3>
+
+                                <p class="project-category">تطبيق جوال</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تصميم واجهات المستخدم">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/uiux2bssaha.jpg" alt="بصحه" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">BSSAH</h3>
+
+                                <p class="project-category">تصميم واجهات المستخدم</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الويب">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web4ehealth.jpg" alt="إي هيلث" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">E-HEALTH</h3>
+
+                                <p class="project-category">تطوير ويب</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="تطبيقات الجوال">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/mobile2abtal.jpg" alt="أبطال" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">ABTAL</h3>
+
+                                <p class="project-category">تطبيق جوال</p>
+
+                            </a>
+                        </li>
+
+                    </ul>
 
                 </section>
 
@@ -700,7 +920,7 @@
         - #المدونة
       -->
 
-            <article class="blog" data-page="blog">
+            <article class="blog" data-page="blog" id="blog">
 
                 <header>
                     <h2 class="h2 article-title">المدونة</h2>
@@ -714,12 +934,9 @@
                             <a href="#">
 
                                 <figure class="blog-banner-box">
-                                    <div
-                                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                                        <iframe width="100%" height="100%"
-                                            src="https://www.youtube.com/embed/pBCxmmzLkhw" frameborder="0"
-                                            allowfullscreen
-                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                    <div class="youtube-facade" data-youtube-facade data-video-id="pBCxmmzLkhw">
+                                        <img src="https://i.ytimg.com/vi/pBCxmmzLkhw/hqdefault.jpg" alt="صورة مصغرة لفيديو PayPik" loading="lazy">
+                                        <span class="youtube-play-btn"><ion-icon name="play"></ion-icon></span>
                                     </div>
                                 </figure>
 
@@ -733,7 +950,7 @@
                                         <time datetime="2022-02-23">mars,2024 - août,2024</time>
                                     </div>
 
-                                    <h3 class="h3 blog-item-title">Java (Spring Boot), Angular</h3>
+                                    <h3 class="h3 blog-item-title">Java, Spring Boot</h3>
 
                                 </div>
 
@@ -744,12 +961,9 @@
                             <a href="#">
 
                                 <figure class="blog-banner-box">
-                                    <div
-                                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                                        <iframe width="100%" height="100%"
-                                            src="https://www.youtube.com/embed/7Wwd1C2mrR4" frameborder="0"
-                                            allowfullscreen
-                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                    <div class="youtube-facade" data-youtube-facade data-video-id="7Wwd1C2mrR4">
+                                        <img src="https://i.ytimg.com/vi/7Wwd1C2mrR4/hqdefault.jpg" alt="صورة مصغرة لفيديو Elmawkef" loading="lazy">
+                                        <span class="youtube-play-btn"><ion-icon name="play"></ion-icon></span>
                                     </div>
                                 </figure>
 
@@ -774,12 +988,9 @@
                             <a href="#">
 
                                 <figure class="blog-banner-box">
-                                    <div
-                                        style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                                        <iframe width="100%" height="100%"
-                                            src="https://www.youtube.com/embed/Cl-KoGahMGw" frameborder="0"
-                                            allowfullscreen
-                                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                                    <div class="youtube-facade" data-youtube-facade data-video-id="Cl-KoGahMGw">
+                                        <img src="https://i.ytimg.com/vi/Cl-KoGahMGw/hqdefault.jpg" alt="صورة مصغرة لفيديو AFMM" loading="lazy">
+                                        <span class="youtube-play-btn"><ion-icon name="play"></ion-icon></span>
                                     </div>
                                 </figure>
 
@@ -810,34 +1021,33 @@
         - #اتصل بي
       -->
 
-            <article class="contact" data-page="contact">
+            <article class="contact" data-page="contact" id="contact">
 
                 <header>
                     <h2 class="h2 article-title">اتصل بي</h2>
                 </header>
 
-                <section class="contact-form">
+                <section class="contact-links">
 
-                    <form action="send-message.php" method="post">
+                    <h3 class="h3 form-title">تواصل معي</h3>
 
-                        <div class="form-group">
-                            <label for="name">الاسم</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                    <p class="contact-links-text">
+                        يمكنك التواصل معي مباشرة عبر البريد الإلكتروني أو واتساب.
+                    </p>
 
-                        <div class="form-group">
-                            <label for="email">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
+                    <div class="contact-buttons">
 
-                        <div class="form-group">
-                            <label for="message">الرسالة</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
+                        <a href="mailto:anasanasri3030@gmail.com" class="btn-download">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>anasanasri3030@gmail.com</span>
+                        </a>
 
-                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                        <a href="https://wa.me/212761844170" class="btn-download btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                            <span>+212 761-844-170</span>
+                        </a>
 
-                    </form>
+                    </div>
 
                 </section>
 
@@ -848,22 +1058,16 @@
     </main>
 
     <!--
-    - #تذييل
-  -->
-
-    <footer class="footer">
-
-        <div class="footer-info">
-            <p>&copy; 2024 أنس أنسري. جميع الحقوق محفوظة.</p>
-        </div>
-
-    </footer>
-
-    <!--
     - #رابط جافا سكريبت
   -->
 
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - رابط الأيقونات
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

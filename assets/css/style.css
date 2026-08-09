@@ -119,6 +119,56 @@
 
 }
 
+/**
+ * light theme overrides (default theme is dark, see :root above)
+ */
+
+:root[data-theme="light"] {
+
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 89%) 0%,
+    hsla(0, 0%, 89%, 0) 50%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right,
+    hsla(0, 0%, 85%, 0.35) 0%,
+    hsla(0, 0%, 96%, 0) 100%
+  ), hsl(0, 0%, 97%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 80%) 0%,
+    hsla(0, 0%, 80%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(45, 100%, 28%),
+    hsl(35, 90%, 32%)
+  );
+
+  --jet: #d9d9dd;
+  --onyx: #e6e6e9;
+  --eerie-black-1: #e9e9ec;
+  --eerie-black-2: #f2f2f4;
+  --smoky-black: #e0e0e3;
+  --white-1: #1b1b1d;
+  --white-2: #1f1f22;
+  --light-gray: #55555c;
+  --light-gray-70: rgba(85, 85, 92, 0.7);
+
+  /* darker gold so accent text stays readable on a light background */
+  --orange-yellow-crayola: #8a6a00;
+  --vegas-gold: #9c5f12;
+  --bittersweet-shimmer: #8a6a00;
+
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.1);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.1);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.1);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.08);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.1);
+
+}
+
 
 
 
@@ -156,7 +206,7 @@ input, textarea {
 
 ::selection {
   background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
+  color: #1c1c1c;
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
@@ -173,6 +223,11 @@ body {
   -ms-animation: animate 60s linear infinite;
   -o-animation: animate 60s linear infinite;
   animation: animate 60s linear infinite;
+}
+
+:root[data-theme="light"] body {
+  background: var(--eerie-black-1);
+  animation: none;
 }
 
 @keyframes animate {
@@ -298,7 +353,7 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
 .filter-item {
-  color: white;
+  color: var(--light-gray);
 }
 .content-card {
   position: relative;
@@ -329,8 +384,7 @@ article.active {
 \*-----------------------------------*/
 
 main {
-  margin: 15px 12px;
-  margin-bottom: 75px;
+  margin: 60px 12px 75px;
   min-width: 259px;
 }
 
@@ -360,8 +414,21 @@ main {
 }
 
 .avatar-box {
+  width: 64px;
+  height: 64px;
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .info-content .name {
@@ -495,6 +562,8 @@ main {
   z-index: 5;
 }
 
+:root[data-theme="light"] .navbar { background: hsla(0, 0%, 100%, 0.75); }
+
 .navbar-list {
   display: flex;
   flex-wrap: wrap;
@@ -571,6 +640,12 @@ main {
 .service-icon-box { margin-bottom: 10px; }
 
 .service-icon-box img { margin: auto; }
+
+.service-icon-box ion-icon {
+  margin: auto;
+  font-size: 40px;
+  color: var(--orange-yellow-crayola);
+}
 
 .service-content-box { text-align: center; }
 
@@ -1104,6 +1179,53 @@ main {
 
 .blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
 
+.youtube-facade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.youtube-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-facade iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.youtube-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 42px;
+  background: hsla(0, 0%, 0%, 0.7);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-1);
+  pointer-events: none;
+}
+
+.youtube-facade:hover .youtube-play-btn { background: var(--orange-yellow-crayola); }
+
+.youtube-play-btn ion-icon {
+  font-size: 22px;
+  color: #ffffff;
+  margin-left: 3px;
+}
+
+.youtube-facade:hover .youtube-play-btn ion-icon { color: #1c1c1c; }
+
 .blog-content { padding: 15px; }
 
 .blog-meta {
@@ -1365,9 +1487,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
-
-  .avatar-box img { width: 120px; }
+  .avatar-box { width: 90px; height: 90px; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1812,6 +1932,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
 
+  :root[data-theme="light"] body::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 0%, 0.1);
+    box-shadow: inset 1px 1px 0 hsla(0, 0%, 0%, 0.08),
+                inset -1px -1px 0 hsla(0, 0%, 0%, 0.08);
+  }
+
+  :root[data-theme="light"] body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 0%, 0.15); }
+
   body::-webkit-scrollbar-button { height: 60px; }
 
 
@@ -1863,7 +1991,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box { width: 150px; height: 150px; }
 
   .info-content .name {
     white-space: nowrap;
@@ -1913,8 +2041,32 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+.theme-toggle-btn {
+  position: absolute;
+  top: 21px;
+  left: 50px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.648);
+  border-radius: 5px;
+  color: #433f40;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.theme-toggle-btn ion-icon { font-size: 18px; }
+
+.theme-toggle-btn .icon-dark { display: none; }
+
+:root[data-theme="light"] .theme-toggle-btn .icon-light { display: none; }
+:root[data-theme="light"] .theme-toggle-btn .icon-dark { display: block; }
+
 .language-selector {
-  position: fixed;
+  position: absolute;
   top: 21px; /* Adjust as needed */
   right: 50px; /* Adjust as needed */
   z-index: 1000; /* Ensure it's above other content */
@@ -1988,4 +2140,32 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .btn-download ion-icon {
   margin-right: 8px; /* Add space between icon and text */
+}
+
+/* contact links (no backend, so no contact form) */
+.contact-links-text {
+  color: var(--light-gray);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-whatsapp { background-color: #25d366; }
+
+.btn-whatsapp:hover { background-color: #1ebe5a; }
+
+/**
+ * once the sidebar is sticky (desktop), the corner controls can stay fixed too
+ */
+@media (min-width: 1250px) {
+
+  .theme-toggle-btn,
+  .language-selector { position: fixed; }
+
 }

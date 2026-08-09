@@ -1,1250 +1,1131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANAS ANASRI</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
+    <title>Anas Anasri — Ingénieur en Développement</title>
+    <meta name="description" content="Anas Anasri est Ingénieur en Développement chez M2T SA, concevant des API fiables et des applications web avec Java et Spring Boot.">
 
-  <!--
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anas Anasri — Ingénieur en Développement">
+    <meta property="og:description" content="Ingénieur en Développement chez M2T SA, concevant des API et des applications avec Java et Spring Boot.">
+    <meta property="og:image" content="./assets/images/profile.png">
+    <meta name="twitter:card" content="summary">
+
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
+    <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="language-selector">
-    <input type="checkbox" id="toggleLanguages" class="toggle-languages">
-    <label for="toggleLanguages" class="current-language">EN</label>
-    <div class="language-options">
-      <a href="index.html">EN</a> <a href="index-fr.html">FR</a> 
+    <button type="button" class="theme-toggle-btn" data-theme-toggle aria-label="Basculer thème clair/sombre" title="Basculer thème clair/sombre">
+        <ion-icon name="sunny-outline" class="icon-light"></ion-icon>
+        <ion-icon name="moon-outline" class="icon-dark"></ion-icon>
+    </button>
+
+    <div class="language-selector">
+        <input type="checkbox" id="toggleLanguages" class="toggle-languages">
+        <label for="toggleLanguages" class="current-language">FR</label>
+        <div class="language-options">
+            <a href="index-en.html">EN</a> <a href="index.html">FR</a> <a href="index-ar.html">AR</a>
+        </div>
     </div>
-  </div>
 
 
-  <!--
+    <!--
     - #MAIN
   -->
 
-  <main>
+    <main>
 
-    <!--
+        <!--
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+        <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+            <div class="sidebar-info">
 
-        <img src="./assets/images/profile.png" alt="Richard hanrick" width="140">
+                <figure class="avatar-box">
+                    <img src="./assets/images/profile.png" alt="Anas Anasri" width="140">
+                </figure>
 
 
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">ANAS ANASRI</h1>
+                <div class="info-content">
+                    <h1 class="name" title="Anas Anasri">ANAS ANASRI</h1>
 
-          <p class="title">COMPUTER ENGINEER</p>
+                    <p class="title">INGÉNIEUR EN DÉVELOPPEMENT</p>
+                </div>
+
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Afficher Contacts</span>
+
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-info_more">
+
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:anasanasri3030@gmail.com" class="contact-link">anasanasri3030@gmail.com</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Téléphone</p>
+
+                            <a href="tel:+12133522795" class="contact-link">+212 761844170</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Anniversaire</p>
+
+                            <time datetime="2001-06-04">04 Juin, 2001</time>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Lieu</p>
+
+                            <address>Casablanca, Maroc</address>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/anasanasri" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="https://twitter.com/anasanasri_me" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+
+
+
+
+        <!--
+      - #main-content
+    -->
+
+        <div class="main-content">
+
+            <!--
+        - #NAVBAR
+      -->
+
+            <nav class="navbar">
+
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <button class="navbar-link  active" data-nav-link>À propos</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>CV</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Blog</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Contact</button>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+
+
+
+            <!--
+        - #ABOUT
+      -->
+
+            <article class="about  active" data-page="about" id="about">
+
+                <header>
+                    <h2 class="h2 article-title">À propos de moi</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>
+                        Je suis Ingénieur en Développement, je conçois avec Java et Spring Boot des API fiables et
+                        des applications orientées données qui répondent à de vrais besoins métier — d'une
+                        plateforme de paiement en ligne à des outils de gestion internes. J'aime décomposer des
+                        problèmes complexes en solutions propres et maintenables.
+                    </p>
+
+                    <p>
+                        C'est là que je suis le plus à l'aise, mais je peux aussi prendre en charge une
+                        fonctionnalité de bout en bout — de la conception de la base de données jusqu'à une
+                        interface fonctionnelle — si le projet l'exige. J'écris un code pensé pour évoluer, je
+                        collabore bien en équipe agile, et je continue à progresser sur tous les fronts — le
+                        frontend inclus.
+                    </p>
+                </section>
+
+
+                <!--
+          - service
+        -->
+
+                <section class="service">
+
+                    <h3 class="h3 service-title">Ce que je fais</h3>
+
+                    <ul class="service-list">
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <ion-icon name="code-slash-outline"></ion-icon>
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Développement d'API</h4>
+
+                                <p class="service-item-text">
+                                    Conception et développement d'applications côté serveur fiables et d'API REST
+                                    avec Java et Spring Boot.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <ion-icon name="server-outline"></ion-icon>
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Conception de Bases de Données</h4>
+
+                                <p class="service-item-text">
+                                    Modélisation et optimisation de bases de données relationnelles comme PostgreSQL
+                                    et MySQL, pour la performance et l'intégrité des données.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <ion-icon name="phone-portrait-outline"></ion-icon>
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Applications Web &amp; Mobiles</h4>
+
+                                <p class="service-item-text">
+                                    Développement d'applications web et mobiles de bout en bout, de la logique
+                                    métier jusqu'à une interface fonctionnelle.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <ion-icon name="people-outline"></ion-icon>
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Collaboration Agile</h4>
+
+                                <p class="service-item-text">
+                                    Travail en équipe Scrum pour livrer des fonctionnalités de manière itérative, de
+                                    la conception au déploiement.
+                                </p>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #RESUME
+      -->
+
+            <article class="resume" data-page="resume" id="resume">
+
+                <header>
+                    <h2 class="h2 article-title">Cv</h2>
+                </header>
+
+
+                <!-- Download Resume Button -->
+                <div class="download-resume">
+                    <a href="/CV-ANAS-ANASRI.pdf" class="btn-download" download>
+                        <ion-icon name="download-outline"></ion-icon> Télécharger Cv
+                    </a>
+                </div>
+
+                <section class="timeline">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">Éducation</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">Diplôme d'Ingénieur d'État en Informatique et Réseaux
+                                (IIR)</h4>
+
+                            <span>2022 - 2024</span>
+
+                            <p class="timeline-text">
+                                École Marocaine des Sciences de l'Ingénieur (EMSI) de Casablanca.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">Licence en Mathématiques et Informatique (SMI)</h4>
+
+                            <span>2021 - 2022</span>
+
+                            <p class="timeline-text">
+                                Université Hassan II de Casablanca
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">Baccalauréat en Sciences Mathématiques A</h4>
+
+                            <span>2018 - 2019</span>
+
+                            <p class="timeline-text">
+                                Lycée Al Khawarizmi de Casablanca
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="timeline">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">Expériences</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">M2T SA — Ingénieur en Développement</h4>
+
+                            <span>Novembre 2024 - Aujourd'hui</span>
+
+                            <p class="timeline-text">
+                                Ingénieur en développement à temps plein, en charge du développement et de la
+                                maintenance de la plateforme de paiement en ligne "PayPik" ainsi que d'autres
+                                solutions internes, avec Java et Spring Boot. Implication sur l'ensemble du cycle
+                                de développement, de la conception de nouvelles fonctionnalités et API REST
+                                jusqu'au déploiement.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">M2T SA — Stagiaire Ingénieur (PFE)</h4>
+
+                            <span>Mars 2024 - Août 2024</span>
+
+                            <p class="timeline-text">
+                                Conception et développement d'une plateforme de paiement en ligne nommée "PayPik",
+                                facile à mettre en œuvre,
+                                supportant divers moyens de paiement (carte de crédit, token, PayPal, etc.). Cette
+                                solution permet aux commerçants
+                                de gérer facilement plusieurs méthodes de paiement sur leur site e-commerce sans la
+                                complexité des systèmes de suivi
+                                de transactions multiples.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">Attijari Factoring</h4>
+
+                            <span>Août 2023 - Septembre 2023</span>
+
+                            <p class="timeline-text">
+                                Conception et développement d'une application nommée "AFMM" utilisant JavaFX pour
+                                fournir une solution complète
+                                pour la gestion des fournisseurs et la génération de factures.
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="skill">
+
+                    <h3 class="h3 skills-title">Mes compétences</h3>
+
+                    <ul class="skills-list content-card">
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Java</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Spring Boot</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">PostGreSQL</h5>
+                                <data value="75">75%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 75%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">MySQL</h5>
+                                <data value="75">75%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 75%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Git</h5>
+                                <data value="85">85%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 85%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Scrum</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 80%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Tailwind CSS</h5>
+                                <data value="65">65%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 65%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Bootstrap</h5>
+                                <data value="60">60%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 60%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Figma</h5>
+                                <data value="60">60%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 60%;"></div>
+                            </div>
+
+                        </li>
+
+                        <li class="skills-item">
+
+                            <div class="title-wrapper">
+                                <h5 class="h5">Adobe</h5>
+                                <data value="55">55%</data>
+                            </div>
+
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 55%;"></div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #PORTFOLIO
+      -->
+
+            <article class="portfolio" data-page="portfolio" id="portfolio">
+
+                <header>
+                    <h2 class="h2 article-title">Portfolio</h2>
+                </header>
+
+                <section class="projects">
+
+                    <ul class="filter-list">
+
+                        <li class="filter-item">
+                            <button class="active" data-filter-btn>Tous</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Applications Web</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Applications Mobiles</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Applications Desktop</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>UI/UX Design</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Conception de logos</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button data-filter-btn>Montage Vidéo</button>
+                        </li>
+
+                    </ul>
+
+                    <div class="filter-select-box">
+
+                        <button class="filter-select" data-select>
+
+                            <div class="select-value" data-selecct-value>Sélectionner une catégorie</div>
+
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+
+                        </button>
+
+                        <ul class="select-list">
+
+
+                            <li class="select-item">
+                                <button data-select-btn>Tous</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>Applications Web</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>Applications Mobiles</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>Applications Desktop</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>UI/UX Design</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>Conception de logos</button>
+                            </li>
+
+                            <li class="select-item">
+                                <button data-select-btn>Montage Vidéo</button>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <ul class="project-list">
+
+                        <li class="project-item  active" data-filter-item data-category="applications web">
+                            <a href="https://github.com/ANASANASRI/Casa_Delivery_MERN">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web1casadelivery.jpg" alt="webcasadelivery"
+                                        loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CASA DELIVERY</h3>
+
+                                <p class="project-category">Développement Web</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications web">
+                            <a href="https://anasanasri.github.io/dashboard-widget-paypik/">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web5paypik.jpg" alt="PayPik dashboard" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">PAY PIK</h3>
+
+                                <p class="project-category">Développement Web</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications web">
+                            <a href="https://github.com/ANASANASRI/ANAS-BOOK-STOR-MERN">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web2anasbook.jpg" alt="anasbook" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">ANAS BOOK</h3>
+
+                                <p class="project-category">Développement Web</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications desktop">
+                            <a href="https://github.com/ANASANASRI/SupplierManagementSystem_SQL-Server_JavaFX">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/desktop1afmm.jpg" alt="afmm" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">AFMM</h3>
+
+                                <p class="project-category">Application Desktop</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications mobiles">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/mobile3casadelivery.jpg" alt="casadelivery"
+                                        loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CASA DELIVERY</h3>
+
+                                <p class="project-category">Application Mobile</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="conception de logos">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/logo3olive.jpg" alt="olive" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">OLIVE</h3>
+
+                                <p class="project-category">Conception de logo</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="conception de logos">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/logo2criov.jpg" alt="finance" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CRIOV</h3>
+
+                                <p class="project-category">Conception de logo</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="ui/ux design">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/uiux1criov.jpg" alt="dsm." loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">CRIOV</h3>
+
+                                <p class="project-category">UI/UX Design</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications web">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web3tabibe.jpg" alt="Application web Tabibe" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">TABIBE</h3>
+
+                                <p class="project-category">Développement Web</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications mobiles">
+                            <a href="https://vimeo.com/749606795">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/mobile1elmawkef.jpg" alt="Application mobile Elmawkef"
+                                        loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">ELMAWKEF</h3>
+
+                                <p class="project-category">Application Mobile</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="ui/ux design">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/uiux2bssaha.jpg" alt="dsm." loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">BSSAH</h3>
+
+                                <p class="project-category">UI/UX Design</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications web">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/web4ehealth.jpg" alt="arrival" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">E-HEALTH</h3>
+
+                                <p class="project-category">Développement Web</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="applications mobiles">
+                            <a href="#">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/works/mobile2abtal.jpg" alt="Application mobile Abtal" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">ABTAL</h3>
+
+                                <p class="project-category">Application Mobile</p>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #BLOG
+      -->
+
+            <article class="blog" data-page="blog" id="blog">
+
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+
+                <section class="blog-posts">
+
+                    <ul class="blog-posts-list">
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <div class="youtube-facade" data-youtube-facade data-video-id="pBCxmmzLkhw">
+                                        <img src="https://i.ytimg.com/vi/pBCxmmzLkhw/hqdefault.jpg" alt="Miniature vidéo PayPik" loading="lazy">
+                                        <span class="youtube-play-btn"><ion-icon name="play"></ion-icon></span>
+                                    </div>
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">PayPik</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">mars,2024 - août,2024</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Java, Spring Boot</h3>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <div class="youtube-facade" data-youtube-facade data-video-id="7Wwd1C2mrR4">
+                                        <img src="https://i.ytimg.com/vi/7Wwd1C2mrR4/hqdefault.jpg" alt="Miniature vidéo Elmawkef" loading="lazy">
+                                        <span class="youtube-play-btn"><ion-icon name="play"></ion-icon></span>
+                                    </div>
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Elmawkef</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Flutter, Firebase</h3>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <!-- ///////////////////////// -->
+
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <div class="youtube-facade" data-youtube-facade data-video-id="Cl-KoGahMGw">
+                                        <img src="https://i.ytimg.com/vi/Cl-KoGahMGw/hqdefault.jpg" alt="Miniature vidéo AFMM" loading="lazy">
+                                        <span class="youtube-play-btn"><ion-icon name="play"></ion-icon></span>
+                                    </div>
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Attijari Factoring Management Maroc</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Août,2023 - Sept,2023</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Java, JavaFX</h3>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #CONTACT
+      -->
+
+            <article class="contact" data-page="contact" id="contact">
+
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+
+
+                <section class="contact-links">
+
+                    <h3 class="h3 form-title">Me Contacter</h3>
+
+                    <p class="contact-links-text">
+                        Vous pouvez me contacter directement par email ou WhatsApp.
+                    </p>
+
+                    <div class="contact-buttons">
+
+                        <a href="mailto:anasanasri3030@gmail.com" class="btn-download">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>anasanasri3030@gmail.com</span>
+                        </a>
+
+                        <a href="https://wa.me/212761844170" class="btn-download btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                            <span>+212 761-844-170</span>
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </article>
+
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+    </main>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:anasanasri3030@gmail.com" class="contact-link">anasanasri3030@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+212 761844170</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 04, 2001</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Casablanca, Morocco</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.facebook.com/anas.anasri.30" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://twitter.com/anasanasri_" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/anas_anasri_30/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
 
 
 
 
 
     <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about" id="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm a Passionate and ambitious 23-year-old developer with significant experience in the field of
-            databases. Expert in Java technologies, Spring Boot, and Angular, I am skilled in designing
-            innovative and high-performance solutions. With a strong ability to solve challenges and
-            successfully lead projects, I am a valuable collaborator within dynamic teams.
-          </p>
-
-          <p>
-            My role is to create functional and user-friendly websites while ensuring they are visually appealing.
-            I infuse each project with a personal touch to ensure it's eye-catching and easy to navigate.
-            My goal is to convey your message and identity in the most creative manner possible.
-          </p>
-
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.Utilizing a comprehensive full-stack
-                  process.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                  " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-video.svg" alt="Video icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Video editing</h4>
-
-                <p class="service-item-text">
-                  Crafting seamless narratives through meticulous editing, enhancing storytelling visually.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/art.svg" alt="art app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Visual arts</h4>
-
-                <p class="service-item-text">
-                  Creative expression through various mediums, capturing the essence of imagination.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/scriptwriting.svg" alt="Scriptwriting app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Scriptwriting</h4>
-
-                <p class="service-item-text">
-                  Crafting compelling narratives with precision and depth, setting the stage for cinematic journeys.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume" id="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-
-        <!-- Download Resume Button -->
-        <div class="download-resume">
-          <a href="/RESUME-ANAS-ANASRI.pdf" class="btn-download" download>
-            <ion-icon name="download-outline"></ion-icon> Download Resume
-          </a>
-        </div>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">State Engineer's Degree in Computer Science and Networks (IIR)</h4>
-
-              <span>2022 - 2024</span>
-
-              <p class="timeline-text">
-                Moroccan School of Engineering Sciences (EMSI) of Casablanca.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Bachelor's Degree in Mathematics and Computer Science (SMI)</h4>
-
-              <span>2021 - 2022</span>
-
-              <p class="timeline-text">
-                Hassan II University of Casablanca
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Baccalauréat in Mathematical Sciences A</h4>
-
-              <span>2018 - 2019</span>
-
-              <p class="timeline-text">
-                Al Khawarizmi High School of Casablanca
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experiences</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">M2T SA</h4>
-
-              <span>March 2024 - August 2024</span>
-
-              <p class="timeline-text">
-                Conception and development of an online payment platform named "PayPik," easy to implement, supporting
-                various payment methods (credit card, token, PayPal, etc.). This solution enables merchants to easily
-                manage multiple payment methods on their e-commerce site without the complexity of multiple transaction
-                tracking systems.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Attijari Factoring</h4>
-
-              <span>August 2023 - September 2023</span>
-
-              <p class="timeline-text">
-                Conception and development of an application named "AFMM" using JavaFX to provide a comprehensive
-                solution for supplier management and invoice generation.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Spring Boot</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Angular</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">React js</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Tailwind CSS</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Bootstrap</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">PostGreSQL</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">MySQL</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Figma</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Git</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Scrum</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio" id="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web apps</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Mobile apps</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Desktop apps</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>ui ux design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Logo design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Video editing</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-btn>All</button>
-              </li>
-
-              <li class="selected-item">
-                <button data-select-btn>Web apps</button>
-              </li>
-
-              <li class="selected-item">
-                <button data-select-btn>Mobile apps</button>
-              </li>
-
-              <li class="selected-item">
-                <button data-select-btn>Desktop apps</button>
-              </li>
-
-              <li class="selected-item">
-                <button data-select-btn>ui ux design</button>
-              </li>
-
-              <li class="selected-item">
-                <button data-select-btn>Logo design</button>
-              </li>
-
-              <li class="selected-item">
-                <button data-select-item>Video editing</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web apps">
-              <a href="https://github.com/ANASANASRI/Casa_Delivery_MERN">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/web1casadelivery.jpg" alt="webcasadelivery" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CASA DELIVERY</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <!-- <li class="project-item  active" data-filter-item data-category="logo design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/logo1core.jpg" alt="core" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CORE</h3>
-
-                <p class="project-category">Logo design</p>
-
-              </a>
-            </li> -->
-            <li class="project-item  active" data-filter-item data-category="web apps">
-              <a href="https://anasanasri.github.io/dashboard-widget-paypik/">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/web5paypik.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">PAY PIK</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web apps">
-              <a href="https://github.com/ANASANASRI/ANAS-BOOK-STOR-MERN">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/web2anasbook.jpg" alt="anasbook" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">ANAS BOOK</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="desktop apps">
-              <a href="https://github.com/ANASANASRI/SupplierManagementSystem_SQL-Server_JavaFX">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/desktop1afmm.jpg" alt="afmm" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">AFMM</h3>
-
-                <p class="project-category">Application Desktop</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="mobile apps">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/mobile3casadelivery.jpg" alt="casadelivery" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CASA DELIVERY</h3>
-
-                <p class="project-category">Application Mobile</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="logo design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/logo3olive.jpg" alt="olive" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">OLIVE</h3>
-
-                <p class="project-category">Logo design</p>
-
-              </a>
-            </li>
-
-            <!-- <li class="project-item  active" data-filter-item data-category="video editing">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/video1.jpg" alt="video1" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">video 1</h3>
-
-                <p class="project-category">Video Editing</p>
-
-              </a>
-            </li> -->
-
-            <li class="project-item  active" data-filter-item data-category="logo design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/logo2criov.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CRIOV</h3>
-
-                <p class="project-category">Logo design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ui ux design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/uiux1criov.jpg" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">CRIOV</h3>
-
-                <p class="project-category">UI/UX Design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web apps">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/web3tabibe.jpg" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">TABIBE</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="mobile apps">
-              <a href="https://vimeo.com/749606795">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/mobile1elmawkef.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">ELMAWKEF</h3>
-
-                <p class="project-category">Application Mobile</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ui ux design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/uiux2bssaha.jpg" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">BSSAH</h3>
-
-                <p class="project-category">UI/UX Design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web apps">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/web4ehealth.jpg" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">E-HEALTH</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="mobile apps">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/works/mobile2abtal.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">ABTAL</h3>
-
-                <p class="project-category">Application Mobile</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog" id="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pBCxmmzLkhw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                  </div>
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">PayPik</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">March,2024 - August,2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Spring Boot, Angular</h3>
-
-                </div>
-
-              </a>
-            </li>
-
-            <!-- ////////////////////////////////////////// -->
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7Wwd1C2mrR4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                  </div>
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Elmawkef</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Flutter, Firebase</h3>
-
-                </div>
-
-              </a>
-            </li>
-
-
-            <!-- ///////////////////////// -->
-            
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Cl-KoGahMGw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                  </div>
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Attijari Factoring Management Maroc</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">August,2023 - September,2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Java, JavaFX</h3>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!-- <section class="blog-posts">
-
-          <div class="row">
-            <h3 class="h3 service-title">PayPik</h3>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/pBCxmmzLkhw" frameborder="0"
-              allowfullscreen></iframe>
-          </div>
-
-          <br>
-
-          <div class="row"></div>
-            <h3 class="h3 service-title">Elmawkef</h3>
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/7Wwd1C2mrR4" frameborder="0"
-              allowfullscreen></iframe>
-          </div>
-
-        </section> -->
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact" id="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <!-- <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-            src="https://www.google.com/maps/d/embed?mid=1sL9yDDyAdXdpg0AA4QKEPIcPwG5jt6w&ehbc=2E312F" 
-            width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section> -->
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!--
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
